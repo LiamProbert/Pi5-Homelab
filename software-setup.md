@@ -2,7 +2,7 @@
 
 This document covers everything from flashing Raspberry Pi OS to verifying the Pi 5 is booting from the NVMe SSD.
 
----
+
 
 ## Flashing the Micro SD Card
 
@@ -22,9 +22,9 @@ The SD card was flashed using Raspberry Pi Imager on a Windows machine. Attempts
 - SSH enabled via the Services tab
 - Locale set to Europe/London, keyboard layout GB
 
-Lite was chosen over the full desktop version because the Pi is headless — it runs as a server over SSH with no monitor attached. The desktop environment would be wasted overhead.
+Lite was chosen over the full desktop version because the Pi is headless, it runs as a server over SSH with no monitor attached. The desktop environment would be wasted overhead.
 
----
+
 
 ## First Boot Issues and Troubleshooting
 
@@ -38,7 +38,7 @@ nmap -sn 192.168.0.0/24
 
 This sends a ping sweep across all 256 addresses on the subnet and reports which hosts respond. The Pi did not appear.
 
-**Checking the router admin page** at `192.168.0.1` — no new device listed.
+**Checking the router admin page** at `192.168.0.1` - no new device listed.
 
 **Pulling the SD card and inspecting the boot partition:**
 
@@ -69,7 +69,7 @@ touch /run/media/lliiiamm/bootfs/ssh
 
 Raspberry Pi OS checks for a file named `ssh` on the boot partition at startup and enables the SSH service if it is present.
 
-**Root cause:** Imager v1.9.6 on Fedora did not write the WiFi credentials or user account correctly. Reflashing via Windows resolved all three issues — WiFi, SSH, and user account — in one pass.
+**Root cause:** Imager v1.9.6 on Fedora did not write the WiFi credentials or user account correctly. Reflashing via Windows resolved all three issues - WiFi, SSH, and user account - in one pass.
 
 This confirmed:
 
@@ -78,7 +78,7 @@ This confirmed:
 - SSH was enabled
 - The user account had been created correctly
 
----
+
 
 ## Verifying the NVMe SSD
 
@@ -106,9 +106,9 @@ The SSD appeared as:
 nvme0n1     238.5G  BG6 KIOXIA 256GB
 ```
 
-This confirmed the X1001 adapter and PCIe connection were working correctly. The blue LED on the X1001 confirms power but does not confirm communication — `lsblk` is the reliable check.
+This confirmed the X1001 adapter and PCIe connection were working correctly. The blue LED on the X1001 confirms power but does not confirm communication, `lsblk` is the reliable check.
 
----
+
 
 ## Cloning the SD Card to NVMe
 
@@ -158,7 +158,7 @@ nvme0n1
 └─nvme0n1p2  rootfs
 ```
 
----
+
 
 ## Configuring NVMe Boot
 
@@ -182,7 +182,7 @@ sudo shutdown now
 
 The SD card was removed and the Pi was powered back on with only the NVMe SSD connected.
 
----
+
 
 ## Verifying NVMe Boot
 
@@ -211,7 +211,7 @@ nvme0n1      238.5G  BG6 KIOXIA 256GB
 
 The Pi was no longer running from the SD card.
 
----
+
 
 ## SSD Health Check
 
@@ -234,7 +234,7 @@ media_errors      : 0
 
 7 unsafe shutdowns were recorded from testing and hardware changes during setup. No media errors or warnings were present. The SSD is confirmed suitable for continuous 24/7 operation.
 
----
+
 
 ## Final Verification
 
