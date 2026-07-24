@@ -1,4 +1,4 @@
-# Raspberry Pi 5 — NVMe SSD Migration & Homelab Server Build
+# Raspberry Pi 5 - NVMe SSD Migration & Homelab Server Build
 
 A hands-on homelab project documenting the migration of a Raspberry Pi 5 from a failing microSD card to a Kioxia NVMe SSD, restoring it as a stable 24/7 home server.
 
@@ -6,7 +6,7 @@ A hands-on homelab project documenting the migration of a Raspberry Pi 5 from a 
 
 ## Overview
 
-The Pi 5 was originally running Pi-hole on a microSD card. After three days of continuous operation the SD card failed, taking the entire home network offline — every device lost internet access because Pi-hole was also handling DHCP.
+The Pi 5 was originally running Pi-hole on a microSD card. After three days of continuous operation the SD card failed, taking the entire home network offline and every device lost internet access because Pi-hole was also handling DHCP.
 
 The solution was to migrate the OS to an NVMe SSD via a PCIe HAT, making the Pi reliable enough to run as a permanent home server.
 
