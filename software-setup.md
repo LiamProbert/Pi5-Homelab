@@ -1,4 +1,4 @@
-# Software Setup — OS Flashing, NVMe Migration & Boot Verification
+# Software Setup - OS Flashing, NVMe Migration & Boot Verification
 
 This document covers everything from flashing Raspberry Pi OS to verifying the Pi 5 is booting from the NVMe SSD.
 
