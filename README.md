@@ -2,7 +2,7 @@
 
 A hands-on homelab project documenting the migration of a Raspberry Pi 5 from a failing microSD card to a Kioxia NVMe SSD, restoring it as a stable 24/7 home server.
 
----
+
 
 ## Overview
 
@@ -12,7 +12,6 @@ The solution was to migrate the OS to an NVMe SSD via a PCIe HAT, making the Pi 
 
 **The outcome:** Pi 5 booting from NVMe, SSH accessible, SSD health verified, ready for Pi-hole and service reinstallation.
 
----
 
 ## Hardware
 
@@ -24,7 +23,7 @@ The solution was to migrate the OS to an NVMe SSD via a PCIe HAT, making the Pi 
 | Geekworm P579 | Case with H500 active cooler |
 | Virgin Media Hub | Home router (192.168.0.1) |
 
----
+
 
 ## Skills Demonstrated
 
@@ -36,14 +35,14 @@ The solution was to migrate the OS to an NVMe SSD via a PCIe HAT, making the Pi 
 - Cloud-init and netplan configuration
 - Boot order and EEPROM configuration on Pi 5
 
----
+
 
 ## Project Files
 
 - [Physical Build](./physical-build.md) — Hardware assembly, PCIe HAT installation, ribbon cable routing, and case build
 - [Software Setup](./software-setup.md) — OS flashing, SSH configuration, NVMe detection, SD to NVMe clone, boot verification, and SSD health check
 
----
+
 
 ## Final System State
 
