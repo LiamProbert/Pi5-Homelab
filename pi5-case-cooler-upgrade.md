@@ -14,13 +14,12 @@ stress -c 4 -t 600
 
 I monitored this in a separate window using `htop`.
 
----
+
 
 ## Installing the Case
 
 After I confirmed that the cooler was seated properly and plugged in correctly, I booted into the Pi to confirm that I hadn't knocked anything loose or broken anything. Everything was working as planned and I began to seat it inside its case.
 
----
 
 ## Recovering the NVMe Boot
 
@@ -65,7 +64,7 @@ In the end, the clone itself had been successful. The issue was not caused by th
 
 This took around an hour and a half to diagnose and resolve, but the process gave me a much better understanding of how Raspberry Pi OS stores its network configuration and reinforced the importance of verifying a cloned system before assuming the migration has completed successfully.
 
----
+
 
 ## Verifying the NVMe Migration
 
@@ -94,7 +93,7 @@ nvme0n1
 
 The Pi is booting entirely from the NVMe SSD. The microSD card is no longer in use.
 
----
+
 
 ## Verifying Docker Services
 
@@ -111,7 +110,7 @@ twingate-lp-pi5-tg   Up (healthy)
 
 Both services survived the migration and case swap without needing any reconfiguration.
 
----
+
 
 ## Verifying SSH Access
 
@@ -123,7 +122,7 @@ ssh lliiiamm@192.168.0.124
 
 The connection completed successfully. SSH started automatically after boot, so the Pi can continue to be managed remotely without needing a monitor or keyboard plugged in.
 
----
+
 
 ## Verifying the Case Fan
 
@@ -149,7 +148,7 @@ vcgencmd measure_temp
 
 The fan uses automatic PWM control, so it stays quiet or completely stopped while the system is idle. It only ramps up once the CPU hits predefined temperature thresholds. Under load, the CPU temperature climbed steadily towards 60°C, confirming the thermal monitoring was working as expected.
 
----
+
 
 ## Unexpected SSH Behaviour
 
@@ -165,7 +164,6 @@ ICMP responses came back consistently. Opening a new SSH session from another te
 
 No reboot or further troubleshooting was needed.
 
----
 
 ## Final Checks
 
