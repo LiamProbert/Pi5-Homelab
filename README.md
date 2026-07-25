@@ -41,7 +41,7 @@ The solution was to migrate the OS to an NVMe SSD via a PCIe HAT, making the Pi 
 
 - [Physical Build](./physical-build.md) — Hardware assembly, PCIe HAT installation, ribbon cable routing, and case build
 - [Software Setup](./software-setup.md) — OS flashing, SSH configuration, NVMe detection, SD to NVMe clone, boot verification, and SSD health check
-
+- [Docker & Twingate Setup](./docker-twingate-setup.md) — Docker installation, Twingate Connector deployment, SSH resource configuration, and remote access setup
 
 
 ## Final System State
