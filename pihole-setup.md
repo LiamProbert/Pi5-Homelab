@@ -129,15 +129,15 @@ An important consideration with Option B: DNS settings are configured per networ
 ### Fedora ThinkPad
 
 ```bash
-nmcli con mod "VM9960629" ipv4.dns "192.168.0.124"
-nmcli con up "VM9960629"
+nmcli con mod "SSID" ipv4.dns "192.168.0.124"
+nmcli con up "SSID"
 ```
 
 **Failsafe if something goes wrong:**
 
 ```bash
-nmcli con mod "VM9960629" ipv4.dns ""
-nmcli con up "VM9960629"
+nmcli con mod "SSID" ipv4.dns ""
+nmcli con up "SSID"
 ```
 
 This clears the manual DNS and returns the ThinkPad to automatic DNS from the router.
