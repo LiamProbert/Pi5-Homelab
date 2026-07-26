@@ -6,7 +6,7 @@ After getting Docker, Twingate and Pi-hole running, I still had the Pi sitting b
 
 When I began to install the active cooler to the Pi, I realised I forgot to remove the heatsink that was previously installed onto the CPU. This meant the cooler would not sit flush and do its job properly. I began to twist the heatsink to the right and left to break the seal, however there was no give.
 
-The solution I came up with was to stress test the Pi for 15 minutes in hope that the thermal paste holding the heatsink down would become malleable enough for it to pop right off, which it did.
+The solution I came up with was to stress test the Pi for 10 minutes in hope that the thermal paste holding the heatsink down would become malleable enough for it to pop right off, which it did.
 
 ```bash
 stress -c 4 -t 600
