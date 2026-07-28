@@ -117,7 +117,7 @@ Both services survived the migration and case swap without needing any reconfigu
 One of the most important checks after any hardware change is making sure remote management still works.
 
 ```bash
-ssh lliiiamm@192.168.0.124
+ssh l******m@192.168.0.124
 ```
 
 The connection completed successfully. SSH started automatically after boot, so the Pi can continue to be managed remotely without needing a monitor or keyboard plugged in.
