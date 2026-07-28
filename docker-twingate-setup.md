@@ -221,7 +221,7 @@ known_hosts updated
 SSH was then confirmed working:
 
 ```bash
-ssh lliiiamm@192.168.0.124
+ssh l******m@192.168.0.124
 ```
 
 This confirmed:
